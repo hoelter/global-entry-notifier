@@ -37,8 +37,7 @@ def main(mytimer: func.TimerRequest) -> None:
         client = Client(account_sid, auth_token)
         sent_message = client.messages.create(body=message, to=os.environ['TARGET_NUMBER'], from_=os.environ['TWILIO_NUMBER'])
 
-        logging.info(f'Message sent: {sent_message
-}')
+        logging.info(f'Message sent: {sent_message}')
 
     except:
         logging.error('Something went wrong.')
